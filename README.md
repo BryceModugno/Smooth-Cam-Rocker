@@ -28,6 +28,7 @@ y = 6L\left(\frac{\theta}{\beta}\right)^2
 $$
 
 
+
 ---
 
 ## Analytical Development & Verification
