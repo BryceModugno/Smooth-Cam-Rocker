@@ -22,9 +22,7 @@ Follower requirements:
 Because standard trigonometric motion laws force zero acceleration at the start of lift, they were unsuitable for the full-rise section. A custom polynomial motion law was selected to better satisfy the acceleration boundary conditions:
 
 $$
-y = 6L\left(\frac{\theta}{\beta}\right)^2 
-- 8L\left(\frac{\theta}{\beta}\right)^3 
-+ 3L\left(\frac{\theta}{\beta}\right)^4
+y = 6L\left(\frac{\theta}{\beta}\right)^2 - 8L\left(\frac{\theta}{\beta}\right)^3 + 3L\left(\frac{\theta}{\beta}\right)^4
 $$
 
 
