@@ -78,4 +78,9 @@ The complete analytical implementation (motion law definition, continuity handli
 **Download Python File:**  
 [cam_pitch_generator.py](src/cam_pitch_generator.py)
 
+---
 
+## Results
+
+![Test2 animation](Media/test_2.gif)
+![Test3 animation](Media/test_3.gif)
