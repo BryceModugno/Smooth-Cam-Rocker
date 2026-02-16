@@ -2,6 +2,8 @@
 
 Analytical cam design study in which a plate cam was synthesized to match a moving conveyor’s velocity during a simulated spot-welding operation. The piecewise motion law was implemented in Python to generate a closed CAD-ready pitch curve (DXF spline export).
 
+![Demo animation](Media/ezgif-6b247a566ce42fdf.gif)
+
 ---
 
 ## Design Scenario
