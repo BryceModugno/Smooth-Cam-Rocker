@@ -44,7 +44,7 @@ Included in the derivation package:
 - Cross-checks between the analytical expressions and the generated motion curves  
 
 📄 **Analytical derivations + plots (PDF):**  
-[View the full derivation package](Media/cam_analytical_derivation.pdf)
+[View the full derivation package](Media/Derivation.pdf)
 
 ---
 
