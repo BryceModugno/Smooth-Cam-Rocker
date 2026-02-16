@@ -69,4 +69,13 @@ pts.append(pts[0])
 msp.add_spline(fit_points=pts, dxfattribs={"flags": 1})
 doc.saveas("cam_pitch_spline.dxf")
 ```
+---
+
+## Download Source Code
+
+The complete analytical implementation (motion law definition, continuity handling, pitch curve generation, and DXF spline export) is available below:
+
+**Download Python File:**  
+[cam_pitch_generator.py](src/cam_pitch_generator.py)
+
 
