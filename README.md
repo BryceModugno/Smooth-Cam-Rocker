@@ -43,7 +43,7 @@ Included in the derivation package:
 - Pressure angle and radius of curvature formulations (as applicable)  
 - Cross-checks between the analytical expressions and the generated motion curves  
 
-📄 **Analytical derivations + plots (PDF):**  
+## Analytical derivations 
 <img src="Media/Derivation.jpg" width="100%">
 ---
 
