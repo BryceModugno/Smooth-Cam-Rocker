@@ -1,6 +1,6 @@
 # Cam Pitch Curve Generator
 
-Analytical cam design study in which a plate cam was synthesized to match a moving conveyor’s velocity during a simulated spot-welding operation. The piecewise motion law was implemented in Python to generate a pitch curve as a DXF spline export.
+Analytical cam design study in which a plate cam was created to match a moving conveyor’s velocity during a simulated spot-welding operation. This study was then implemented in Python to generate a pitch curve as a DXF spline export and finally simulated in CAD.
 
 ![Demo animation](Media/ezgif-6b247a566ce42fdf.gif)
 
