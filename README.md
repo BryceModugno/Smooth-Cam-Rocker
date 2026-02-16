@@ -1,6 +1,6 @@
 # Cam Pitch Curve Generator
 
-Analytical cam design study in which a plate cam was synthesized to match a moving conveyor’s velocity during a simulated spot-welding operation. The piecewise motion law was implemented in Python to generate a closed CAD-ready pitch curve (DXF spline export).
+Analytical cam design study in which a plate cam was synthesized to match a moving conveyor’s velocity during a simulated spot-welding operation. The piecewise motion law was implemented in Python to generate a pitch curve as a DXF spline export.
 
 ![Demo animation](Media/ezgif-6b247a566ce42fdf.gif)
 
@@ -19,7 +19,7 @@ Follower requirements:
   - Accelerate to −22 in/sec
   - Maintain that velocity for 1.1 in (velocity matching region)
   - Decelerate to bottom  
-- Immediately repeat cycle (no bottom dwell)
+- Immediately repeat cycle
 
 Because standard trigonometric motion laws force zero acceleration at the start of lift, they were unsuitable for the full-rise section. A custom polynomial motion law was selected to better satisfy the acceleration boundary conditions:
 
@@ -33,23 +33,13 @@ $$
 
 ## Analytical Development & Verification
 
-Before writing the generator script, the cam motion was developed analytically as a design study. This includes non-zero interface conditions, governing equations for each motion segment, and continuity checks at segment boundaries, followed by numerical verification and plotting.
+Before writing the generator script, the cam motion was developed analytically as a design study. This includes non-zero interface conditions, standardized governing equations for each motion segment, and numerical verification and plotting.
 
-Included in the derivation package:
-
-- Non-zero interface conditions and continuity verification across segment transitions  
-- Governing equations for each motion segment (rise, dwell, return, velocity-matching region)  
-- Position / velocity / acceleration profiles and plots  
-- Pressure angle and radius of curvature formulations (as applicable)  
-- Cross-checks between the analytical expressions and the generated motion curves  
-
-## Analytical derivations 
 <img src="Media/Derivation.jpg" width="100%">
+
 ---
 
 ## Implementation Summary
-
-Engineering workflow used in the Python tool:
 
 1. Define piecewise follower displacement function  
 2. Compute velocity and acceleration analytically  
@@ -68,3 +58,15 @@ def pitch_curve(theta, E, d, y):
     lam = (2*np.pi - theta) - np.arctan(E/(d + y))
     mag = np.sqrt((d + y)**2 + E**2)
     return np.cos(lam)*mag, np.sin(lam)*mag
+```
+
+Closed spline DXF export:
+
+```python
+pts = list(zip(np.array(x_array), np.array(y_array)))
+pts.append(pts[0])
+
+msp.add_spline(fit_points=pts, dxfattribs={"flags": 1})
+doc.saveas("cam_pitch_spline.dxf")
+```
+
